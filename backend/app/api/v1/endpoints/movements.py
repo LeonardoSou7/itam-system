@@ -2,11 +2,11 @@
 from typing import List, Annotated
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.ext.asyncio import AsyncSession
-from backend.app.db.session import get_db
-from backend.app.api import deps
-from backend.app.schemas.movement import Movement, LoanCreate, ReturnCreate
-from backend.app.crud import movement as crud_movement
-from backend.app.models.user import User
+from app.db.session import get_db
+from app.api import deps
+from app.schemas.movement import Movement, LoanCreate, ReturnCreate
+from app.crud import movement as crud_movement
+from app.models.user import User
 
 router = APIRouter()
 

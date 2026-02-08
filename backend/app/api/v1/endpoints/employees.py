@@ -2,11 +2,11 @@
 from typing import List
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
-from backend.app.db.session import get_db
-from backend.app.api import deps
-from backend.app.schemas.employee import Employee, EmployeeCreate
-from backend.app.crud import employee as crud_employee
-from backend.app.models.user import User
+from app.db.session import get_db
+from app.api import deps
+from app.schemas.employee import Employee, EmployeeCreate
+from app.crud import employee as crud_employee
+from app.models.user import User
 
 router = APIRouter()
 

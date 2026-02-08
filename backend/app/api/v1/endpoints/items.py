@@ -2,11 +2,11 @@
 from typing import List, Annotated
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.ext.asyncio import AsyncSession
-from backend.app.db.session import get_db
-from backend.app.api import deps
-from backend.app.schemas.item import Item, ItemCreate, Category, CategoryCreate
-from backend.app.crud import item as crud_item
-from backend.app.models.user import User
+from app.db.session import get_db
+from app.api import deps
+from app.schemas.item import Item, ItemCreate, Category, CategoryCreate
+from app.crud import item as crud_item
+from app.models.user import User
 
 router = APIRouter()
 

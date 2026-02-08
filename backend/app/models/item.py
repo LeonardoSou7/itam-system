@@ -4,7 +4,7 @@ from sqlalchemy import String, Integer, ForeignKey, Date, Enum, Text
 from datetime import date, datetime
 from typing import Optional
 from enum import Enum as PyEnum
-from backend.app.db.base_class import Base
+from app.db.base_class import Base
 
 class ItemStatus(PyEnum):
     AVAILABLE = "AVAILABLE"

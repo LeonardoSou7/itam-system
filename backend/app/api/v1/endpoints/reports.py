@@ -2,10 +2,10 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, func
-from backend.app.db.session import get_db
-from backend.app.api import deps
-from backend.app.models.item import Item, ItemStatus
-from backend.app.models.user import User
+from app.db.session import get_db
+from app.api import deps
+from app.models.item import Item, ItemStatus
+from app.models.user import User
 
 router = APIRouter()
 

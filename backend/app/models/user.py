@@ -2,7 +2,7 @@
 from sqlalchemy.orm import Mapped, mapped_column
 from sqlalchemy import String, Boolean, Enum
 import uuid
-from backend.app.db.base_class import Base
+from app.db.base_class import Base
 from enum import Enum as PyEnum
 
 class UserRole(PyEnum):

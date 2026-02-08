@@ -2,11 +2,11 @@
 import asyncio
 import logging
 
-from backend.app.db.session import AsyncSessionLocal
-from backend.app.crud.user import create_user, get_user_by_username
-from backend.app.schemas.user import UserCreate
-from backend.app.models.user import UserRole
-from backend.app.db.base import Base
+from app.db.session import AsyncSessionLocal
+from app.crud.user import create_user, get_user_by_username
+from app.schemas.user import UserCreate
+from app.models.user import UserRole
+from app.db.base import Base
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

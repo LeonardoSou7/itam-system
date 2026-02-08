@@ -11,8 +11,8 @@ from alembic import context
 # Add the project root to the python path to allow imports
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
 
-from backend.app.core.config import settings
-from backend.app.db.base import Base
+from app.core.config import settings
+from app.db.base import Base
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.

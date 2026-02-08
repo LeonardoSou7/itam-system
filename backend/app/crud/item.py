@@ -2,9 +2,9 @@
 from typing import List, Optional
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
-from backend.app.models.item import Item, ItemStatus
-from backend.app.models.category import Category
-from backend.app.schemas.item import ItemCreate, ItemUpdate, CategoryCreate
+from app.models.item import Item, ItemStatus
+from app.models.category import Category
+from app.schemas.item import ItemCreate, ItemUpdate, CategoryCreate
 
 async def get_items(db: AsyncSession, skip: int = 0, limit: int = 100) -> List[Item]:
     result = await db.execute(select(Item).offset(skip).limit(limit))

@@ -4,9 +4,9 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
 from datetime import datetime
 from fastapi import HTTPException, status
-from backend.app.models.movement import Movement, MovementType
-from backend.app.models.item import Item, ItemStatus
-from backend.app.schemas.movement import LoanCreate, ReturnCreate
+from app.models.movement import Movement, MovementType
+from app.models.item import Item, ItemStatus
+from app.schemas.movement import LoanCreate, ReturnCreate
 
 async def create_loan(db: AsyncSession, loan: LoanCreate, user_id: str) -> Movement:
     # 1. Check if item exists and is available

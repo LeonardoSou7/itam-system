@@ -2,9 +2,9 @@
 from typing import Optional
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
-from backend.app.models.user import User
-from backend.app.schemas.user import UserCreate
-from backend.app.core.security import get_password_hash
+from app.models.user import User
+from app.schemas.user import UserCreate
+from app.core.security import get_password_hash
 
 async def get_user_by_username(db: AsyncSession, username: str) -> Optional[User]:
     result = await db.execute(select(User).where(User.username == username))

@@ -2,7 +2,7 @@
 from pydantic import BaseModel
 from typing import Optional
 from datetime import date, datetime
-from backend.app.models.item import ItemStatus
+from app.models.item import ItemStatus
 
 class CategoryBase(BaseModel):
     name: str

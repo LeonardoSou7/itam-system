@@ -4,11 +4,11 @@ from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
 from jose import jwt, JWTError
 from sqlalchemy.ext.asyncio import AsyncSession
-from backend.app.db.session import get_db
-from backend.app.core.config import settings
-from backend.app.schemas.user import TokenPayload
-from backend.app.crud import user as crud_user
-from backend.app.models.user import User
+from app.db.session import get_db
+from app.core.config import settings
+from app.schemas.user import TokenPayload
+from app.crud import user as crud_user
+from app.models.user import User
 
 reusable_oauth2 = OAuth2PasswordBearer(
     tokenUrl=f"{settings.API_V1_STR}/auth/token"

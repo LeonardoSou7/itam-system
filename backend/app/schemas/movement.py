@@ -2,7 +2,7 @@
 from pydantic import BaseModel
 from typing import Optional
 from datetime import datetime
-from backend.app.models.movement import MovementType
+from app.models.movement import MovementType
 
 class MovementBase(BaseModel):
     item_id: int
