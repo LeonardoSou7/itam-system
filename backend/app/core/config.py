@@ -15,7 +15,11 @@ class Settings(BaseSettings):
     DATABASE_URL: str = "sqlite+aiosqlite:///./backend/app.db"
     
     # CORS
-    BACKEND_CORS_ORIGINS: list[str] = ["http://localhost:5173", "http://localhost:3000"]
+    BACKEND_CORS_ORIGINS: list[str] = [
+        "http://localhost:5173", 
+        "http://localhost:3000",
+        "https://*.vercel.app",  # Allow all Vercel preview deployments
+    ]
 
     model_config = SettingsConfigDict(case_sensitive=True, env_file=".env")
 

@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from '../../components/ui/button';
 import { Input } from '../../components/ui/input';
 import { motion } from 'framer-motion';
-import axios from 'axios';
+import { api } from '@/lib/api';
 import { Loader2 } from 'lucide-react';
 
 export default function LoginPage() {
@@ -26,7 +26,7 @@ export default function LoginPage() {
             formData.append('username', username);
             formData.append('password', password);
 
-            const response = await axios.post('http://localhost:8000/api/v1/auth/token', formData);
+            const response = await api.post('/auth/token', formData);
 
             login(response.data.access_token);
             navigate('/dashboard');
